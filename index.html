@@ -45,10 +45,7 @@
             animation: float 6s linear infinite;
         }
 
-        @keyframes float {
-            from { transform: translateY(100vh); }
-            to   { transform: translateY(-10vh); }
-        }
+        @keyframes float { from { transform: translateY(100vh); } to { transform: translateY(-10vh); } }
     </style>
 </head>
 <body>
@@ -56,7 +53,7 @@
 <div class="bg"></div>
 
 <h1>Hey Drishti 💖</h1>
-<h2>I have one last question for you...</h2>
+<h2>I have one last question...</h2>
 <h1>Will you be my Valentine?</h1>
 
 <button id="yes" onclick="yesClicked()">YES Hardik 💘</button>
@@ -73,16 +70,16 @@ function yesClicked() {
 }
 
 function moveNo() {
-    var x = Math.random() * window.innerWidth;
-    var y = Math.random() * window.innerHeight;
-    document.getElementById('no').style.left = x + 'px';
-    document.getElementById('no').style.top = y + 'px';
+    var x = Math.random()*window.innerWidth;
+    var y = Math.random()*window.innerHeight;
+    document.getElementById('no').style.left = x+'px';
+    document.getElementById('no').style.top = y+'px';
 }
 
 function createHeart() {
     const heart = document.createElement('div');
     heart.className = 'heart';
-    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.left = Math.random()*100+'vw';
     heart.innerHTML = '❤️';
     document.body.appendChild(heart);
     setTimeout(() => heart.remove(), 6000);
@@ -90,12 +87,12 @@ function createHeart() {
 setInterval(createHeart, 400);
 
 function confetti() {
-    for (let i = 0; i < 180; i++) {
+    for (let i=0; i<180; i++) {
         let c = document.createElement('div');
-        c.style.position = 'absolute';
-        c.style.left = Math.random() * 100 + 'vw';
-        c.style.top = Math.random() * 100 + 'vh';
-        c.innerHTML = '💖';
+        c.style.position='absolute';
+        c.style.left = Math.random()*100+'vw';
+        c.style.top = Math.random()*100+'vh';
+        c.innerHTML='💖';
         document.body.appendChild(c);
     }
 }
